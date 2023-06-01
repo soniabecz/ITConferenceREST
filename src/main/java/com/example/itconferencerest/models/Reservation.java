@@ -1,27 +1,27 @@
 package com.example.itconferencerest.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
+@Table(name = "reservations")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Reservation {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(updatable = false, nullable = false)
+    @Column(nullable = false)
     private Long id;
 
     @Column
     private Long lectureID;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JsonIgnore
     @JoinColumn(name = "userID")
     private User user;
-
-
-
 }
