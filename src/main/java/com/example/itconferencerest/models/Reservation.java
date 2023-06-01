@@ -15,9 +15,8 @@ public class Reservation {
     @Column(updatable = false, nullable = false)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "lectureID")
-    private Lecture lecture;
+    @Column
+    private Long lectureID;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "userID")
