@@ -8,6 +8,9 @@ import com.example.itconferencerest.repositories.ReservationRepository;
 import com.example.itconferencerest.repositories.UserRepository;
 import org.springframework.stereotype.Service;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -61,7 +64,7 @@ public class ConferenceService {
             return user.get().getReservations();
         } else {
             System.out.println("Użytkownik o podanym loginie nie istnieje");
-            return Collections.emptyList();
+            return null;
         }
     }
 
@@ -92,25 +95,25 @@ public class ConferenceService {
         if (attendeesNo < 5) {
             user.setReservations(reservationRepository.findAllByUser_Id(user.getId()));
             chosenLecture.setReservations(reservationRepository.findAllByLectureID(lectureID));
+            String mail = "Hello " + login + ", your reservation for lecture on " + chosenLecture.getSubject() + " taking place from " + chosenLecture.getStartTime().toString() + " to " + chosenLecture.getEndTime().toString() + " was successfully made";
+            sendEmail(mail, email);
             return reservationRepository.save(reservation);
         } else {
             System.out.println("Na wybraną prelekcję nie ma już miejsc");
             return null;
         }
 
-        //TODO wysyłanie maili
-
     }
 
-    public void deleteReservation(Long reservationID) {
-        Optional<Reservation> reservation = reservationRepository.findById(reservationID);
-        Optional<User> user = userRepository.findByReservationsContains(reservation.get());
-        Lecture lecture = lectures.get(Math.toIntExact(reservation.get().getLectureID()));
-        reservationRepository.deleteById(reservationID);
+    public void deleteReservation(Long id) {
+        Optional<Reservation> reservation = reservationRepository.findById(id);
 
-        user.get().setReservations(reservationRepository.findAllByUser_Id(user.get().getId()));
+        if (reservation.isPresent()) {
+            Lecture lecture = lectures.get(Math.toIntExact(reservation.get().getLectureID()));
+            reservationRepository.deleteById(id);
 
-        lecture.setReservations(reservationRepository.findAllByLectureID(lecture.getId()));
+            lecture.setReservations(reservationRepository.findAllByLectureID(lecture.getId()));
+        }
     }
 
     public User updateEmail(Long userID, String newEmail) {
@@ -135,9 +138,8 @@ public class ConferenceService {
     }
 
     public List<Reservation> getAllReservations() {
-        List<Reservation> reservations = reservationRepository.findAll();
 
-        return reservations;
+        return reservationRepository.findAll();
     }
 
     public User saveUser(String login, String email) {
@@ -217,6 +219,26 @@ public class ConferenceService {
         subjectsData = "This subject was chosen for " + subjectReservationsNo + " of " + allReservationsNo + " reservations which is " + percentage + "%";
 
         return subjectsData;
+    }
+
+    public void sendEmail(String mail, String recipient) {
+        try {
+            File file = new File("src/main/resources/static/powiadomienia.txt");
+            if (file.createNewFile()) {
+                FileWriter writer = new FileWriter("src/main/resources/static/powiadomienia.txt");
+                writer.write("Date | Mail | Recipient\n");
+                writer.write(new Date().toString() + " | " + mail + " | " + recipient + "\n");
+                writer.close();
+
+            } else {
+                FileWriter writer = new FileWriter("src/main/resources/static/powiadomienia.txt", true);
+                writer.write(new Date().toString() + " | " + mail + " | " + recipient + "\n");
+                writer.close();
+            }
+        } catch (IOException e) {
+            System.out.println("Error occurred");
+            e.printStackTrace();
+        }
     }
 
 }

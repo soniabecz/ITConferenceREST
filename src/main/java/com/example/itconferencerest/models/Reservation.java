@@ -20,7 +20,7 @@ public class Reservation {
     @Column
     private Long lectureID;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnore
     @JoinColumn(name = "userID")
     private User user;

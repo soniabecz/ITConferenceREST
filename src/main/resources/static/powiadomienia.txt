@@ -1,0 +1,23 @@
+Date | Mail | Recipient
+Fri Jun 02 12:07:59 CEST 2023 | Hello sonia, your reservation for lecture on SUBJECT_2 taking place from Thu Jun 01 10:00:00 CEST 2023 to Thu Jun 01 11:45:00 CEST 2023 was successfully made | sonia@gmail.com
+Fri Jun 02 12:08:12 CEST 2023 | Hello sonia, your reservation for lecture on SUBJECT_1 taking place from Thu Jun 01 12:00:00 CEST 2023 to Thu Jun 01 13:45:00 CEST 2023 was successfully made | sonia@gmail.com
+Fri Jun 02 12:08:46 CEST 2023 | Hello sonia, your reservation for lecture on SUBJECT_3 taking place from Thu Jun 01 14:00:00 CEST 2023 to Thu Jun 01 15:45:00 CEST 2023 was successfully made | sonia@gmail.com
+Fri Jun 02 12:28:19 CEST 2023 | Hello sonik, your reservation for lecture on SUBJECT_3 taking place from Thu Jun 01 14:00:00 CEST 2023 to Thu Jun 01 15:45:00 CEST 2023 was successfully made | soniabecz@gmail.com
+Fri Jun 02 12:35:03 CEST 2023 | Hello sonia, your reservation for lecture on SUBJECT_3 taking place from Thu Jun 01 14:00:00 CEST 2023 to Thu Jun 01 15:45:00 CEST 2023 was successfully made | soniabecz@gmail.com
+Fri Jun 02 12:35:07 CEST 2023 | Hello sonia, your reservation for lecture on SUBJECT_1 taking place from Thu Jun 01 10:00:00 CEST 2023 to Thu Jun 01 11:45:00 CEST 2023 was successfully made | soniabecz@gmail.com
+Fri Jun 02 12:35:11 CEST 2023 | Hello sonia, your reservation for lecture on SUBJECT_2 taking place from Thu Jun 01 12:00:00 CEST 2023 to Thu Jun 01 13:45:00 CEST 2023 was successfully made | soniabecz@gmail.com
+Fri Jun 02 12:36:27 CEST 2023 | Hello sonia, your reservation for lecture on SUBJECT_2 taking place from Thu Jun 01 12:00:00 CEST 2023 to Thu Jun 01 13:45:00 CEST 2023 was successfully made | soniabecz@gmail.com
+Fri Jun 02 12:36:30 CEST 2023 | Hello sonia, your reservation for lecture on SUBJECT_1 taking place from Thu Jun 01 10:00:00 CEST 2023 to Thu Jun 01 11:45:00 CEST 2023 was successfully made | soniabecz@gmail.com
+Fri Jun 02 12:36:32 CEST 2023 | Hello sonia, your reservation for lecture on SUBJECT_3 taking place from Thu Jun 01 14:00:00 CEST 2023 to Thu Jun 01 15:45:00 CEST 2023 was successfully made | soniabecz@gmail.com
+Fri Jun 02 12:37:01 CEST 2023 | Hello sonia, your reservation for lecture on SUBJECT_3 taking place from Thu Jun 01 14:00:00 CEST 2023 to Thu Jun 01 15:45:00 CEST 2023 was successfully made | soniabecz@gmail.com
+Fri Jun 02 12:37:05 CEST 2023 | Hello sonia, your reservation for lecture on SUBJECT_2 taking place from Thu Jun 01 10:00:00 CEST 2023 to Thu Jun 01 11:45:00 CEST 2023 was successfully made | soniabecz@gmail.com
+Fri Jun 02 12:41:20 CEST 2023 | Hello sonia, your reservation for lecture on SUBJECT_2 taking place from Thu Jun 01 10:00:00 CEST 2023 to Thu Jun 01 11:45:00 CEST 2023 was successfully made | sonia@gmail.com
+Fri Jun 02 12:41:34 CEST 2023 | Hello sonia, your reservation for lecture on SUBJECT_3 taking place from Thu Jun 01 12:00:00 CEST 2023 to Thu Jun 01 13:45:00 CEST 2023 was successfully made | sonia@gmail.com
+Fri Jun 02 12:44:07 CEST 2023 | Hello sonia, your reservation for lecture on SUBJECT_3 taking place from Thu Jun 01 12:00:00 CEST 2023 to Thu Jun 01 13:45:00 CEST 2023 was successfully made | sonia@gmail.com
+Fri Jun 02 12:44:13 CEST 2023 | Hello sonia, your reservation for lecture on SUBJECT_2 taking place from Thu Jun 01 10:00:00 CEST 2023 to Thu Jun 01 11:45:00 CEST 2023 was successfully made | sonia@gmail.com
+Fri Jun 02 12:46:55 CEST 2023 | Hello sonia, your reservation for lecture on SUBJECT_2 taking place from Thu Jun 01 10:00:00 CEST 2023 to Thu Jun 01 11:45:00 CEST 2023 was successfully made | sonia@gmail.com
+Fri Jun 02 12:46:58 CEST 2023 | Hello sonia, your reservation for lecture on SUBJECT_3 taking place from Thu Jun 01 12:00:00 CEST 2023 to Thu Jun 01 13:45:00 CEST 2023 was successfully made | sonia@gmail.com
+Fri Jun 02 12:49:55 CEST 2023 | Hello sonia, your reservation for lecture on SUBJECT_3 taking place from Thu Jun 01 12:00:00 CEST 2023 to Thu Jun 01 13:45:00 CEST 2023 was successfully made | sonia@gmail.com
+Fri Jun 02 12:49:58 CEST 2023 | Hello sonia, your reservation for lecture on SUBJECT_2 taking place from Thu Jun 01 10:00:00 CEST 2023 to Thu Jun 01 11:45:00 CEST 2023 was successfully made | sonia@gmail.com
+Fri Jun 02 12:52:22 CEST 2023 | Hello sonia, your reservation for lecture on SUBJECT_2 taking place from Thu Jun 01 10:00:00 CEST 2023 to Thu Jun 01 11:45:00 CEST 2023 was successfully made | sonia@gmail.com
+Fri Jun 02 12:52:26 CEST 2023 | Hello sonia, your reservation for lecture on SUBJECT_3 taking place from Thu Jun 01 12:00:00 CEST 2023 to Thu Jun 01 13:45:00 CEST 2023 was successfully made | sonia@gmail.com
