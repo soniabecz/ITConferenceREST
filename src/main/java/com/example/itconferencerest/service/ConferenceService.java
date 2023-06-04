@@ -18,10 +18,7 @@ public interface ConferenceService {
     public String getAllUsers();
     public List<Reservation> getAllReservations();
     public User saveUser(String login, String email);
-    public Lecture findLectureById(Long id);
-    public boolean checkIfUserHasTime(User user, Date time);
     public String getLecturesData(Long lectureID);
     public String getSubjectsData(Subject subject);
-    public void sendEmail(String mail, String recipient);
     public boolean checkIfLoginAlreadyExists(User user);
 }

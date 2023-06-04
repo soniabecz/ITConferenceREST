@@ -152,7 +152,6 @@ public class ConferenceServiceImpl implements ConferenceService {
     }
 
     public List<Reservation> getAllReservations() {
-
         return reservationRepository.findAll();
     }
 
@@ -170,7 +169,7 @@ public class ConferenceServiceImpl implements ConferenceService {
         return userRepository.save(user);
     }
 
-    public Lecture findLectureById(Long id) {
+    private Lecture findLectureById(Long id) {
         Lecture chosenLecture = new Lecture();
 
         for (Lecture lecture : lectures) {
@@ -182,7 +181,7 @@ public class ConferenceServiceImpl implements ConferenceService {
         return chosenLecture;
     }
 
-    public boolean checkIfUserHasTime(User user, Date time) {
+    private boolean checkIfUserHasTime(User user, Date time) {
 
         List<Reservation> usersReservation = user.getReservations();
 
@@ -232,7 +231,7 @@ public class ConferenceServiceImpl implements ConferenceService {
         return subjectsData;
     }
 
-    public void sendEmail(String mail, String recipient) {
+    private void sendEmail(String mail, String recipient) {
         try {
             File file = new File("src/main/resources/static/powiadomienia.txt");
             if (file.createNewFile()) {
