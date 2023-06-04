@@ -23,7 +23,7 @@ public class UserController {
     ConferenceServiceImpl service;
 
 
-    @GetMapping()
+    @GetMapping("/plan")
     public ResponseEntity<String> getConferencePlan() {
         String conferencePlan = service.getConferencePlan();
         return new ResponseEntity<>(conferencePlan, HttpStatus.OK);
