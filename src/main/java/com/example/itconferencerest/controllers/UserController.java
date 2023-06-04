@@ -1,22 +1,26 @@
 package com.example.itconferencerest.controllers;
 
+import com.example.itconferencerest.validators.UniqueUsername;
 import com.example.itconferencerest.models.Reservation;
 import com.example.itconferencerest.models.Subject;
 import com.example.itconferencerest.models.User;
-import com.example.itconferencerest.service.ConferenceService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.itconferencerest.service.ConferenceServiceImpl;
+import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/api")
+@AllArgsConstructor
 public class UserController {
 
-    @Autowired
-    ConferenceService service;
+
+    ConferenceServiceImpl service;
 
 
     @GetMapping()
@@ -44,8 +48,14 @@ public class UserController {
     }
 
     @PostMapping("/reserve")
-    public ResponseEntity<Reservation> saveTodo(@RequestParam("login") String login, @RequestParam("email") String email, @RequestParam("lectureID") Long lectureID) {
-        Reservation reservation = service.makeReservation(login, email, lectureID);
+    public ResponseEntity<Reservation> saveReservation(@Validated(UniqueUsername.class) @RequestBody User user, BindingResult bindingResult, @RequestParam("lectureID") Long lectureID) {
+        if (bindingResult.hasErrors())
+        {
+            bindingResult.getAllErrors().forEach(System.out::println);
+
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+        Reservation reservation = service.makeReservation(user.getLogin(), user.getEmail(), lectureID);
         return new ResponseEntity<>(reservation, HttpStatus.CREATED);
     }
 
@@ -74,7 +84,7 @@ public class UserController {
     }
 
     @GetMapping("/attendees/subject")
-    public ResponseEntity<String> getLectureData(@RequestParam("subject") Subject subject) {
+    public ResponseEntity<String> getSubjectData(@RequestParam("subject") Subject subject) {
         String data = service.getSubjectsData(subject);
         return new ResponseEntity<>(data, HttpStatus.OK);
     }

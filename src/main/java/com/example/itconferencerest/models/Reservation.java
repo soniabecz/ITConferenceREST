@@ -2,9 +2,8 @@ package com.example.itconferencerest.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.validation.Valid;
+import lombok.*;
 
 @Entity
 @Table(name = "reservations")
@@ -12,6 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Reservation {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false)
@@ -22,6 +22,8 @@ public class Reservation {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnore
+    @Valid
     @JoinColumn(name = "userID")
     private User user;
+
 }
