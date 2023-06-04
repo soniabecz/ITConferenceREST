@@ -42,6 +42,8 @@ Dostęp do usług odybywa się za pomocą REST API. Adresy do usług:
       01-06-2023 12:00 to 01-06-2023 13:45 SUBJECT_3
       01-06-2023 14:00 to 01-06-2023 15:45 SUBJECT_3
 
+
+
 ### Zobacz rezerwacje danego użytkownika
 
 #### Request
@@ -67,6 +69,8 @@ Dostęp do usług odybywa się za pomocą REST API. Adresy do usług:
       }
     ]
 
+
+
 ### Zapisz się na prelekcję
 
 #### Request
@@ -90,6 +94,8 @@ Dostęp do usług odybywa się za pomocą REST API. Adresy do usług:
       "lectureID": 1
     }
 
+
+
 ### Anuluj rezerwację
 
 #### Request
@@ -101,6 +107,8 @@ Dostęp do usług odybywa się za pomocą REST API. Adresy do usług:
 #### Response
 
     Status: 404 No Content
+
+
 
 ### Zaktualizuj adres email
 
@@ -118,6 +126,8 @@ Dostęp do usług odybywa się za pomocą REST API. Adresy do usług:
       "email": "user4@gmail.com"
     }
 
+
+
 ### Wyświetl listę zarejestrowanych użytkowników
 
 #### Request
@@ -131,6 +141,8 @@ Dostęp do usług odybywa się za pomocą REST API. Adresy do usług:
       Login: user2 Email: user2@gmail.com
       Login: user3 Email: user3@gmail.com
 
+
+
 ### Wyświetl zestawienie wykładów wg zainteresowania
 
 #### Request
@@ -142,7 +154,9 @@ Dostęp do usług odybywa się za pomocą REST API. Adresy do usług:
 #### Response Body
 
     This lecture was attended by 1.0 of 3.0 attendees which is 33,33%
-    
+ 
+ 
+ 
 ### Wyświetl zestawienie ścieżek tematycznych wg zainteresowania
 
 #### Request
