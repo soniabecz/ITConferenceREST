@@ -10,12 +10,12 @@ Projekt został stworzony za pomocą:
 * Maven version: 3.8.1
 	
 ## Setup
-Aby uruchomić program, zainstaluj go lokalnie za pomocą komend:
+Aby uruchomić program użyj komend:
 
 ```
-$ cd ../lorem
-$ npm install
-$ npm start
+$ mvn clean install
+$ mvn spring-boot:run
+
 ```
 
 Aplikacja jest dostępna pod adresem localhost:8080
